@@ -1,0 +1,176 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #34495E;  /* Fondo oscuro general */
+    color: white;  /* Todo el texto en blanco */
+    text-align: center;
+}
+
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido del header */
+    align-items: center;
+    position: relative; /* Necesario para posicionar el carrito en la esquina */
+}
+
+h1 {
+    font-size: 24px;  /* Tamaño más pequeño para el nombre */
+    margin: 0;  /* Eliminar márgenes por defecto */
+}
+
+#cart-btn {
+    position: absolute;  /* Posiciona el carrito fuera del flujo normal */
+    top: 10px;  /* 10px desde la parte superior */
+    right: 20px;  /* 20px desde la parte derecha */
+    background-color: transparent;
+    color: white;
+    padding: 8px 15px;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#cart-btn:hover {
+    background-color: #BDC3C7;  /* Hover en color claro para el carrito */
+    color: black;  /* Cambio a color negro en hover */
+}
+
+/* Menú */
+nav {
+    background-color: transparent;  /* Fondo transparente para el menú */
+    font-size: 16px;  /* Tamaño de fuente más pequeño */
+    margin: 0;  /* Sin margen */
+    padding: 0;  /* Sin padding extra */
+    display: flex;  /* Usamos flexbox para facilitar la alineación */
+    justify-content: center;  /* Centra el menú horizontalmente */
+    align-items: center;  /* Alineación vertical centrada */
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;  /* Asegura que los elementos del menú estén centrados */
+    align-items: center;  /* Alineación vertical centrada */
+}
+
+nav ul li {
+    margin: 0 15px;  /* Márgenes laterales para los elementos del menú */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Cambios en el estilo cuando la opción está activa */
+nav ul li a.active {
+    color: #E74C3C;  /* Color rojo para la opción activa */
+    font-weight: bold;  /* Negrita cuando está activo */
+    border-bottom: 2px solid #E74C3C;  /* Línea debajo de la opción activa */
+}
+
+nav ul li a:hover {
+    color: #BDC3C7;  /* Hover en color gris claro */
+}
+
+/* Contenedor de productos */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product {
+    background-color: #2C3E50;  /* Fondo oscuro para los productos */
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: transform 0.3s ease;
+    display: none;  /* Ocultar productos por defecto */
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 18px; /* Asegúrate de que todos los títulos tengan el mismo tamaño */
+}
+
+.product p {
+    color: #BDC3C7;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.price {
+    font-size: 20px;
+    color: #E74C3C;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Botones */
+.btn {
+    color: white;  /* Texto del botón en blanco */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #BDC3C7;  /* Fondo de los botones en gris claro */
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #34495E;  /* Hover en fondo oscuro */
+}
+
+/* Pie de página */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    margin-top: auto; /* Esto empuja el pie de página hacia abajo */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Asegura que el cuerpo de la página ocupe toda la altura */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* El contenedor principal ocupa el espacio restante */
+body {
+    display: flex;
+    flex-direction: column;
+}
