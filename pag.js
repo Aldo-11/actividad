@@ -10,28 +10,35 @@ function hideAllSections() {
 }
 
 // Función para mostrar solo la sección seleccionada
-function showSection(sectionId) {
+function showSection(sectionClass) {
     hideAllSections();
-    
-    const section = document.querySelectorAll(`#${sectionId}`);
+    document.getElementById('welcome-message').style.display = 'none'; // Hide welcome message
+    const section = document.querySelectorAll(`.${sectionClass}`);
     section.forEach(product => {
         product.style.display = 'block';
     });
 }
 
-// Mostrar la sección de Balones cuando se carga la página
+// Función para mostrar todos los productos y el mensaje de bienvenida
+function showHome() {
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+        product.style.display = 'block';
+    });
+    document.getElementById('welcome-message').style.display = 'block'; // Show welcome message
+}
+
+// Mostrar todos los productos cuando se carga la página
 document.addEventListener('DOMContentLoaded', () => {
-    showSection('balones');
+    showHome();
 });
 
 // Funcionalidad del botón "Comprar"
 document.querySelectorAll('.buy-btn').forEach(button => {
     button.addEventListener('click', (event) => {
-        const productName = event.target.closest('.product').querySelector('h3').textContent; // Obtener el nombre del producto
-        cartItems.push(productName); // Añadir el nombre del producto al carrito
+        const productName = event.target.closest('.product').querySelector('h3').textContent;
+        cartItems.push(productName);
         alert(`${productName} añadido al carrito`);
-
-        // Actualizar el contador del carrito
         updateCart();
     });
 });
@@ -39,16 +46,5 @@ document.querySelectorAll('.buy-btn').forEach(button => {
 // Función para actualizar el carrito
 function updateCart() {
     const cartBtn = document.getElementById('cart-btn');
-    const cartCount = cartItems.length;
-    cartBtn.textContent = `Carrito (${cartCount})`; // Actualiza el texto del botón
+    cartBtn.textContent = `Carrito (${cartItems.length})`;
 }
-
-// Mostrar el contenido del carrito cuando se haga clic en el botón
-const cartBtn = document.getElementById('cart-btn');
-cartBtn.addEventListener('click', () => {
-    if (cartItems.length > 0) {
-        alert("Productos en tu carrito:\n" + cartItems.join('\n')); // Muestra la lista de productos
-    } else {
-        alert("Tu carrito está vacío.");
-    }
-});

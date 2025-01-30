@@ -9,131 +9,138 @@
 <body>
     <header>
         <div class="header-container">
-            <h1>FutbolZone</h1>
+            <img src="logo.jpeg" alt="Logo de FutbolZone" class="logo"> <!-- Agregado el logo -->
+            <h1>SportZone</h1>
             <button id="cart-btn" class="btn-cart">Carrito (0)</button>
         </div>
         <nav>
             <ul>
+                <li><a href="#" onclick="showHome()">Inicio</a></li>
                 <li><a href="#" onclick="showSection('balones')">Balones</a></li>
                 <li><a href="#" onclick="showSection('ropa')">Ropa Deportiva</a></li>
                 <li><a href="#" onclick="showSection('calcetas')">Calcetas</a></li>
                 <li><a href="#" onclick="showSection('jerseys')">Jerseys</a></li>
                 <li><a href="#" onclick="showSection('tenis')">Tenis de Fútbol</a></li>
-                
             </ul>
         </nav>
     </header>
 
     <div class="container">
+        <!-- Mensaje de bienvenida -->
+        <div id="welcome-message">
+            <h2>Bienvenido a FutbolZone</h2>
+            <p>Explora nuestra tienda y encuentra los mejores productos deportivos.</p>
+        </div>
+
         <!-- Sección Balones -->
-        <div class="product" id="balones">
-            <img src="https://via.placeholder.com/250" alt="Balón Nike">
+        <div class="product balones">
+            <img src="balon1.jpg" alt="Balón Nike">
             <h3>Balón Nike Strike</h3>
             <p>Diseño profesional con tecnología Aerowtrac para mejor precisión.</p>
             <p class="price">$899 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="balones">
-            <img src="https://via.placeholder.com/250" alt="Balón Adidas Tango">
+        <div class="product balones">
+            <img src="balon2.jpg" alt="Balón Adidas Tango">
             <h3>Balón Adidas Tango</h3>
             <p>Diseño único para partidos oficiales y entrenamientos.</p>
             <p class="price">$950 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="balones">
-            <img src="https://via.placeholder.com/250" alt="Balón Puma Future">
+        <div class="product balones">
+            <img src="balon3.jpg" alt="Balón Puma Future">
             <h3>Balón Puma Future</h3>
             <p>Ideal para futbolistas profesionales con tecnología avanzada.</p>
             <p class="price">$999 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-
+    
         <!-- Sección Ropa Deportiva -->
-        <div class="product" id="ropa">
-            <img src="https://via.placeholder.com/250" alt="Camiseta Nike">
+        <div class="product ropa">
+            <img src="cami1.jpg" alt="Camiseta Nike">
             <h3>Camiseta Nike Dry Fit</h3>
             <p>Comodidad y transpirabilidad para tu entrenamiento.</p>
             <p class="price">$499 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="ropa">
-            <img src="https://via.placeholder.com/250" alt="Sudadera Adidas">
+        <div class="product ropa">
+            <img src="cami2.jpg" alt="Sudadera Adidas">
             <h3>Sudadera Adidas Confort</h3>
             <p>Perfecta para entrenar en clima frío, ligera y cómoda.</p>
             <p class="price">$749 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="ropa">
-            <img src="https://via.placeholder.com/250" alt="Camiseta Under Armour">
+        <div class="product ropa">
+            <img src="cami3.jpg" alt="Camiseta Under Armour">
             <h3>Camiseta Under Armour</h3>
             <p>Rendimiento alto y estilo único para cualquier actividad.</p>
             <p class="price">$599 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-
+    
         <!-- Sección Calcetas -->
-        <div class="product" id="calcetas">
-            <img src="https://via.placeholder.com/250" alt="Calcetas Adidas">
+        <div class="product calcetas">
+            <img src="cal1.jpg" alt="Calcetas Adidas">
             <h3>Calcetas Adidas Performance</h3>
             <p>Soporte adicional y confort para tus pies.</p>
             <p class="price">$199 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="calcetas">
-            <img src="https://via.placeholder.com/250" alt="Calcetas Nike">
+        <div class="product calcetas">
+            <img src="cal2.jpg" alt="Calcetas Nike">
             <h3>Calcetas Nike Elite</h3>
             <p>Máxima comodidad y ajuste para futbolistas exigentes.</p>
             <p class="price">$220 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="calcetas">
-            <img src="https://via.placeholder.com/250" alt="Calcetas Puma">
+        <div class="product calcetas">
+            <img src="cal3.jpg" alt="Calcetas Puma">
             <h3>Calcetas Puma Performance</h3>
             <p>Diseño anatómico para mayor confort en el campo.</p>
             <p class="price">$180 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-
+    
         <!-- Sección Jerseys -->
-        <div class="product" id="jerseys">
-            <img src="https://via.placeholder.com/250" alt="Jersey Barcelona">
+        <div class="product jerseys">
+            <img src="jer1.jpg" alt="Jersey Barcelona">
             <h3>Jersey Barcelona</h3>
             <p>Replica oficial para los fanáticos del fútbol.</p>
             <p class="price">$1,199 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="jerseys">
-            <img src="https://via.placeholder.com/250" alt="Jersey Real Madrid">
+        <div class="product jerseys">
+            <img src="jer2.jpg" alt="Jersey Real Madrid">
             <h3>Jersey Real Madrid</h3>
             <p>Replica oficial para los seguidores del club blanco.</p>
             <p class="price">$1,399 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="jerseys">
-            <img src="https://via.placeholder.com/250" alt="Jersey Juventus">
+        <div class="product jerseys">
+            <img src="jer3.jpg" alt="Jersey Juventus">
             <h3>Jersey Juventus</h3>
             <p>Replica oficial para los fanáticos de la Vecchia Signora.</p>
             <p class="price">$1,499 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-
+    
         <!-- Sección Tenis de Fútbol -->
-        <div class="product" id="tenis">
-            <img src="https://via.placeholder.com/250" alt="Tenis Puma Future">
+        <div class="product tenis">
+            <img src="ten1.jpg" alt="Tenis Puma Future">
             <h3>Tenis Puma Future</h3>
             <p>Tenis ligeros y rápidos, perfectos para el campo.</p>
             <p class="price">$2,299 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="tenis">
-            <img src="https://via.placeholder.com/250" alt="Tenis Nike Mercurial">
+        <div class="product tenis">
+            <img src="ten2.jpg" alt="Tenis Nike Mercurial">
             <h3>Tenis Nike Mercurial</h3>
             <p>Velocidad y control para jugadores de élite.</p>
             <p class="price">$2,799 MXN</p>
             <button class="btn buy-btn">Comprar</button>
         </div>
-        <div class="product" id="tenis">
-            <img src="https://via.placeholder.com/250" alt="Tenis Adidas Predator">
+        <div class="product tenis">
+            <img src="ten3.jpg" alt="Tenis Adidas Predator">
             <h3>Tenis Adidas Predator</h3>
             <p>Control absoluto del balón y tracción en el campo.</p>
             <p class="price">$2,599 MXN</p>
@@ -145,7 +152,7 @@
         <p>&copy; 2025 FutbolZone. Todos los derechos reservados.</p>
         <p>Contacto: info@futbolzone.com</p>
     </footer>
-    
+
     <script src="pag.js"></script>
 </body>
 </html>
